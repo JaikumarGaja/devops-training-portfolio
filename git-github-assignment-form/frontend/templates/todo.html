@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .todo-item {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        .error {
+            color: red;
+        }
+        .loading {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+        <body>
+    <h1>Todo List</h1>
+    
+    <div id="todos">
+        {% if todo_list %}
+            {% for todo in todo_list %}
+                <div class="todo-item">
+                    <strong>{{ todo.title }}</strong><br>
+                    <small>{{ todo.description }}</small>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No tasks found. Time to relax!</p>
+        {% endif %}
+    </div>
+
+    <br>
+    <a href="/" style="margin-bottom: 20px; display: inline-block; padding: 12px 30px; background-color: #007bff; color: white; text-decoration: none; border-radius: 30px; font-weight: 600; transition: background-color 0.3s ease;">
+            Back to Home
+        </a>
+</body>
+</body>
+</html>
